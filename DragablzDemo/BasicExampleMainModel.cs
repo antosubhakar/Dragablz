@@ -82,7 +82,7 @@ namespace DragablzDemo
 #endif
 #if NET45
                 OnPropertyChanged();
-#endif 
+#endif
             }
         }
 
@@ -99,13 +99,13 @@ namespace DragablzDemo
 #endif
 #if NET45
                 OnPropertyChanged();
-#endif 
+#endif
             }
         }
 
         public ReadOnlyObservableCollection<Person> People
         {
-            get { return new ReadOnlyObservableCollection<Person>(_people); }            
+            get { return new ReadOnlyObservableCollection<Person>(_people); }
         }
 
         public ICommand AddNewPerson
@@ -130,7 +130,7 @@ namespace DragablzDemo
 #endif
 #if NET45
                 OnPropertyChanged();
-#endif 
+#endif
             }
         }
 
@@ -141,7 +141,7 @@ namespace DragablzDemo
 
         public PositionMonitor BasicColourMonitor
         {
-            get { return _basicColourMonitor; }            
+            get { return _basicColourMonitor; }
         }
 
         public PositionMonitor PeopleMonitor
@@ -159,8 +159,7 @@ namespace DragablzDemo
         [NotifyPropertyChangedInvocator]
 #if NET40
         protected virtual void OnPropertyChanged(string propertyName)
-#endif
-#if NET45
+#else
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
 #endif
         {
